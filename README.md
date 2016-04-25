@@ -59,6 +59,6 @@ All API endpoints have the prefix `api/<myfiuRevampedVersion>`. All the API endp
         * Returns {expectedGpa, recommendedCourses:[]}
 
 ## Docker Environment
-A Docker image of our entire backend's environment is available at [https://hub.docker.com/r/alastairparagas/ellery_web](https://hub.docker.com/r/alastairparagas/ellery_web). This includes all of the environment dependencies needed to run ellery, from the R statistics package, to Node, PhantomJS and CasperJS.
+A `docker-compose.yml` and `Dockerfile` file of our entire backend's environment is available is provided at our repository that automatically allows you to have a working version of this software in your desktop or production environment in an instant. This includes all of the environment dependencies needed to run MyFIU-Backend, from Node, PhantomJS and CasperJS to PostgreSQL.
 
-By default, the Docker container is exposed at port `8000`. Mount the codebase volume at `/source`. Make sure that when running the container, to run the backend app's entrypoint as `node /source/<entryFileHere>`.
+If you have Docker installed on your system, simply `docker-compose up` and you're on your way! For more information on Docker, check out the [Docker website](https://www.docker.com/) and the [Docker Compose](https://docs.docker.com/compose/overview/) websites.
