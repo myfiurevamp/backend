@@ -44,7 +44,7 @@ All API endpoints have the prefix `api/<myfiuRevampedVersion>`. All the API endp
         * **POST**
         * Accepts {username, password}
         * Returns {jwtToken}
-2. `/student`
+2. `/auth`
     * All these API endpoints require either an: 
         * `Authorization: Bearer <jwtToken>` provided as the Authorization header **OR** 
         * `token=<jwtToken>` as part of the request parameters
