@@ -2,5 +2,5 @@
     "node": true, 
     "browser": true,
     "esnext": true,
-    "maxlen": 75
+    "maxlen": 80
 }
