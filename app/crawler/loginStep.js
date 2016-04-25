@@ -23,7 +23,7 @@ function loginStep(username, password) {
             
             var crawler = crawlerObj.crawler;
             
-            crawler.on("auth", function (authResponse) {
+            crawler.once("auth", function (authResponse) {
                 if (authResponse === "error") {
                     reject(new Error("Invalid credentials"));
                     return;

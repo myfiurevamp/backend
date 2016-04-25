@@ -1,7 +1,7 @@
 var loginStep = require('./loginStep');
 
 /**
-* Course List All step. Retrieves all of the courses the student 
+* Course List step. Retrieves all of the courses the student 
 *   has taken
 * @param {String} username
 * @param {String} password
@@ -14,7 +14,7 @@ function courseListAllStep(username, password) {
         return new Promise(function (resolve, reject) {
             var crawler = crawlerObj.crawler;
             
-            crawler.on("allCoursesList", function (list) {
+            crawler.once("allCoursesList", function (list) {
                 resolve(list);
             });
             
