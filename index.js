@@ -3,7 +3,6 @@ var app = (require('express'))(),
 
 (require('node-env-file'))(__dirname + '/.env');
 
-app.use('/api/' + process.env.VERSION, apiRouter);
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 
@@ -18,10 +17,12 @@ app.use(function (req, res, next) {
             status: 200, 
             message: "OPTIONS request"
         });
-    } else {
-        next();	
     }
+    
+    next();
 });
+
+app.use('/api/' + process.env.VERSION, apiRouter);
 
 app.listen(process.env.PORT, function () {
     console.log('Started listening at port ' + process.env.PORT);

@@ -5,7 +5,7 @@ services:
     build: .
     command: "node /source/index.js"
     ports:
-      - "80:8000"
+      - "8000:8000"
     links:
       - db
     volumes:

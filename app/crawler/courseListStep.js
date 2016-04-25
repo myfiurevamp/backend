@@ -92,7 +92,7 @@ function courseListAllStep(username, password) {
                             return returnedObj;
                         });
                     });
-                    
+                    courseList.shift();
                     this.emit("allCoursesList", courseList);
                 });
             });
