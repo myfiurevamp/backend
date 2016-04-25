@@ -16,6 +16,9 @@ function studentInfoStep(username, password) {
             crawler.once("info", function (infoObj) {
                 resolve(infoObj);
             });
+            crawler.once("error", function (e) {
+                reject(e); 
+            });
             
             // Dashboard Page
             crawler

@@ -30,6 +30,9 @@ function loginStep(username, password) {
                 }
                 resolve(crawlerObj);
             });
+            crawler.once("error", function (e) {
+                reject(e); 
+            });
             
             crawler.then([{
                 username: username,

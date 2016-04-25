@@ -17,6 +17,9 @@ function courseListAllStep(username, password) {
             crawler.once("allCoursesList", function (list) {
                 resolve(list);
             });
+            crawler.once("error", function (e) {
+                reject(e);
+            });
             
             // Dashboard Page
             crawler
