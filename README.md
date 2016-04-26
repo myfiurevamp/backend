@@ -57,6 +57,9 @@ All API endpoints have the prefix `api/<myfiuRevampedVersion>`. All the API endp
     * **GET** `/prediction`
         * Returns a personalized prediction set of your academic path, using our analysis engine
         * Returns {expectedGpa, recommendedCourses:[]}
+    * **GET** `/info`
+        * Returns the user's personal information
+        * Returns {pantherId, email, address, phone}
 
 ## Docker Environment
 A `docker-compose.yml` and `Dockerfile` file of our entire backend's environment is available is provided at our repository that automatically allows you to have a working version of this software in your desktop or production environment in an instant. This includes all of the environment dependencies needed to run MyFIU-Backend, from Node, PhantomJS and CasperJS to PostgreSQL.
