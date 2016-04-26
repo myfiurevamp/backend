@@ -28,6 +28,22 @@ function dbQuery(sqlQuery, queryValues) {
                 resultList = [], 
                 
                 rowCallback = function (row) {
+                    if (row.pantherid) {
+                        row.pantherId = row.pantherid;
+                        delete row.pantherid;
+                    }
+                    if (row.semestermonth && row.semesteryear) {
+                        row.semesterLabel = row.semestermonth + 
+                            " Semester " + row.semesteryear;
+                    }
+                    if (row.semestermonth) {
+                        row.semesterMonth = row.semestermonth;
+                        delete row.semestermonth;
+                    }
+                    if (row.semesteryear) {
+                        row.semesterYear = row.semesteryear;
+                        delete row.semesteryear;
+                    }
                     resultList.push(row);
                 },
                 errorCallback = function (error) {
