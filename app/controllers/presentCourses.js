@@ -11,7 +11,7 @@ function presentCourses(req, res) {
     var username = req.auth.username,
         password = req.auth.password;
     
-    dbQuery("SELECT pantherId, id, name, semesterMonth, semesterYear, " + 
+    dbQuery("SELECT id, name, semesterMonth, semesterYear, " + 
             "grade, units FROM courses WHERE pantherId=$1 AND " + 
             "semesterMonth=$2 AND semesterYear=$3", 
             [username, "Spring", "2016"])
