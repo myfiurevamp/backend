@@ -1,9 +1,9 @@
 CREATE TABLE users (
-    pantherId int NOT NULL UNIQUE,
-    email varchar(15) NOT NULL,
+    pantherId bigint NOT NULL UNIQUE,
+    email varchar(20) NOT NULL,
     password varchar(256) NOT NULL,
-    address varchar,
-    phone int,
+    address varchar(100),
+    phone bigint,
     PRIMARY KEY (pantherId)
 );
 
