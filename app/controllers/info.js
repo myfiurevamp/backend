@@ -24,6 +24,9 @@ function info(req, res) {
             if (studentInfo.password) {
                 delete studentInfo.password;
             }
+            if (!studentInfo.pantherId) {
+                studentInfo.pantherId = username;
+            }
             res.status(200).json({
                 status: 200,
                 message: "Success",
