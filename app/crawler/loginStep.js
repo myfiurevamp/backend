@@ -45,7 +45,7 @@ function loginStep(username, password) {
                 this.click("#content #login form input#submit");
             }]);
             crawler.then(function () {
-                if (this.exists("#login_error")) {
+                if (this.getTitle() === "MyFIU | PantherSoft Sign-in") {
                     this.emit("auth", "error");
                 } else {
                     this.emit("auth", "success");
